@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empathy Spectrum Disorder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --deep-teal: #1d5b66;
+      --rust-orange: #b5542e;
+      --mustard-yellow: #d99d2b;
+      --muted-turquoise: #3f9d9b;
+      --background: #fdf9f3;
+      --text: #222;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--deep-teal);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+    }
+
+    nav {
+      background-color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      color: var(--deep-teal);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 4rem 1rem;
+      text-align: center;
+      background-color: var(--muted-turquoise);
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h3 {
+      font-size: 1.75rem;
+      color: var(--rust-orange);
+      margin-bottom: 1rem;
+    }
+
+    .subtypes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .subtype {
+      padding: 1rem;
+      border-left: 5px solid var(--mustard-yellow);
+      background-color: #fff;
+    }
+
+    footer {
+      background-color: var(--deep-teal);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.75rem;
+      }
+
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Empathy Spectrum Disorder</h1>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#subtypes">Subtypes</a>
+    <a href="#toolkit">Toolkit</a>
+    <a href="#training">Training</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Understanding Empathy as a Spectrum</h2>
+    <p>Empathy Spectrum Disorder (ESD) is a proposed diagnostic framework for recognizing patterns of empathy dysregulation—ranging from emotional detachment to hyperempathic overwhelm and strategic dark empathy.</p>
+  </section>
+
+  <section id="about" class="section">
+    <h3>What is ESD?</h3>
+    <p>Empathy Spectrum Disorder redefines empathy as a multidimensional faculty affected by neurological, emotional, and environmental factors. It helps explain client presentations that fall through the cracks of traditional diagnoses like ASD, NPD, or CPTSD—focusing instead on the regulation of empathy itself.</p>
+  </section>
+
+  <section id="subtypes" class="section">
+    <h3>Meet the Subtypes</h3>
+    <div class="subtypes">
+      <div class="subtype"><strong>Type A</strong><br>Hypoempathic Detachment</div>
+      <div class="subtype"><strong>Type B</strong><br>Hyperempathic Flooding</div>
+      <div class="subtype"><strong>Type C</strong><br>Rational/Cognitive Dominance</div>
+      <div class="subtype"><strong>Type D</strong><br>Dysregulated/Oscillating Empathy</div>
+      <div class="subtype"><strong>Type E</strong><br>Shutdown (Trauma-Linked)</div>
+      <div class="subtype"><strong>Type F</strong><br>Dark Empathy (Strategic)</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ayesha Qahash | ORCID: <a href="https://orcid.org/0009-0008-9570-2211" style="color: white; text-decoration: underline;">0009-0008-9570-2211</a></p>
+  </footer>
+</body>
+</html>
