@@ -200,13 +200,23 @@ ol li {
   margin-bottom: 0.5rem;
 }
 
-/* Mobile Adaptation for Small Screens (max-width: 768px) */
+/* ===========================
+   MOBILE ADAPTATIONS 
+   =========================== */
+
+/* Small Screens (max-width: 768px) */
 @media screen and (max-width: 768px) {
   
+  /* General Padding Adjustments */
   body {
     padding: 0 1rem;
   }
 
+  header, .hero, nav, .section {
+    padding: 1rem 0.5rem;
+  }
+
+  /* Navigation Styling */
   nav {
     display: flex;
     flex-direction: column;
@@ -219,23 +229,35 @@ ol li {
 
   .dropdown-content {
     position: static;
-    min-width: 100%;
+    width: 100%;
+    background-color: var(--background);
+  }
+
+  .dropdown-content a {
+    border-bottom: 1px solid var(--deep-teal);
+  }
+
+  /* Hero and Header Sizing */
+  header h1 {
+    font-size: 2rem;
   }
 
   .hero {
     padding: 1rem 0;
   }
 
-  .section {
-    padding: 1rem 0;
+  .hero h2 {
+    font-size: 1.75rem;
   }
 
+  /* Subtype Cards Adjustments */
   .subtypes {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 0.5rem;
   }
 
   .subtype {
+    margin-bottom: 1rem;
     padding: 0.5rem;
   }
 
@@ -244,23 +266,22 @@ ol li {
     height: auto;
   }
 
-  header h1 {
-    font-size: 2rem;
+  /* Footer Refinement */
+  footer p {
+    line-height: 1.4;
+    margin: 0.5rem 0;
   }
 }
 
 /* Ultra Mobile (max-width: 480px) */
 @media screen and (max-width: 480px) {
+  
   header h1 {
     font-size: 1.75rem;
   }
 
   .hero h2 {
     font-size: 1.5rem;
-  }
-
-  nav {
-    flex-direction: column;
   }
 
   .dropdown-content a {
@@ -272,4 +293,3 @@ ol li {
     font-size: 0.8rem;
   }
 }
-
