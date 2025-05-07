@@ -179,3 +179,24 @@ footer {
   padding: 1em 0 0 0;
   font-size: 0.9rem;
 }
+
+ul {
+  list-style-position: inside; /* Moves the bullet inside the list item */
+  padding-left: 1.2rem; /* Slight left padding for alignment */
+  margin-bottom: 1rem;
+}
+
+ol {
+  list-style-position: inside;
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem; /* Space between each list item */
+}
+
+ol li {
+  margin-bottom: 0.5rem;
+}
+
