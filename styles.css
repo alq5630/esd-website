@@ -1,127 +1,130 @@
-/* Global Variables */
-:root {
-  --deep-teal: #1d5b66;
-  --rust-orange: #b5542e;
-  --mustard-yellow: #d99d2b;
-  --muted-turquoise: #3f9d9b;
-  --background: #fdf9f3;
-  --text: #222;
-}
+    :root {
+      --deep-teal: #1d5b66;
+      --rust-orange: #b5542e;
+      --mustard-yellow: #d99d2b;
+      --muted-turquoise: #3f9d9b;
+      --background: #fdf9f3;
+      --text: #222;
+    }
 
-/* Universal Reset */
-* {
-  box-sizing: border-box;
-  padding: 0 3rem 2rem 3rem;
-}
+    * {
+      box-sizing: border-box;
+      padding: 0 3rem 2rem 3rem;
+    }
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: var(--background);
-  color: var(--text);
-  line-height: 1.6;
-}
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-.logo {
-  text-align: center;
-  margin-top: 0;
-  padding: 0;
-}
+    .logo {
+      text-align: center;
+      margin-top: 0;
+      padding:0;
+    }
 
-.logo img {
-  max-width: 500px;
-  height: auto;
-}
+    .logo img {
+      max-width: 500px;
+      height: auto;
+    }
 
-header {
-  background-color: var(--deep-teal);
-  color: white;
-  padding: 2rem 1rem 1rem;
-  text-align: center;
-}
+    header {
+      background-color: var(--deep-teal);
+      color: white;
+      padding: 2rem 1rem 1rem;
+      text-align: center;
+    }
 
-header h1 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  line-height: 0;
-}
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      line-height: 0;
+    }
 
-nav {
-  background-color: #fdf9f3;
-  text-align: center;
-  padding: 1rem;
-}
+    nav {
+      background-color: #fdf9f3;
+      text-align: center;
+      padding: 1rem;
+    }
 
-nav a {
-  margin: 0 1rem;
-  color: var(--deep-teal);
-  text-decoration: none;
-  font-weight: 600;
-}
+    nav a {
+      margin: 0 1rem;
+      color: var(--deep-teal);
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-.hero {
-  padding: 1rem;
-  text-align: center;
-  background-color: var(--muted-turquoise);
-  color: white;
-}
+    .hero {
+      padding: 1rem;
+      text-align: center;
+      background-color: var(--muted-turquoise);
+      color: white;
+    }
 
-.hero h2 {
-  font-size: 2rem;
-  margin-bottom: 0;
-}
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 0;
+    }
 
-.hero p {
-  max-width: 700px;
-  margin: 0 auto;
-}
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto;
+    }
 
-.section {
-  padding: 0;
-  max-width: 1000px;
-  margin: auto;
-}
+    .section {
+      padding: 0;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-.section h3 {
-  font-size: 1.75rem;
-  color: var(--rust-orange);
-  margin-bottom: 1rem;
-}
+    .section h3 {
+      font-size: 1.75rem;
+      color: var(--rust-orange);
+      margin-bottom: 1rem;
+    }
 
-.subtypes {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2em;
-  text-align: center;
-}
+    .subtypes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2em;
+      text-align: center;
+    }
 
-.subtype {
-  padding: 1rem;
-  border-left: 5px solid var(--mustard-yellow);
-  background-color: #fff;
-}
+    .subtype {
+      padding: 1rem;
+      border-left: 5px solid var(--mustard-yellow);
+      background-color: #fff;
+    }
 
-.subtype img {
+    .subtype img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
   margin-top: 1rem;
 }
-
-footer {
-  background-color: var(--deep-teal);
+    .subtype:hover {
+  background-color: var(--muted-turquoise);
   color: white;
-  text-align: center;
-  padding: 1em 0 0 0;
-  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
 }
 
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 1.75rem;
-  }
+    footer {
+      background-color: var(--deep-teal);
+      color: white;
+      text-align: center;
+      padding: 1em 0 0 0;
+      font-size: 0.9rem;
+    }
 
-  .hero h2 {
-    font-size: 1.5rem;
-  }
-}
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.75rem;
+      }
+
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+    }
