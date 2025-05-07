@@ -119,12 +119,54 @@
       font-size: 0.9rem;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.75rem;
-      }
+    /* Mobile Optimization */
+@media (max-width: 768px) {
+  body {
+    padding: 0 1rem;
+  }
 
-      .hero h2 {
-        font-size: 1.5rem;
-      }
-    }
+  nav a {
+    margin: 0 0.5rem;
+  }
+
+  .subtypes {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero h2 {
+    font-size: 1.25rem;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  nav a {
+    flex: 1 1 100%;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: var(--deep-teal);
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+}
