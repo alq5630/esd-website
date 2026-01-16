@@ -627,3 +627,17 @@ ol li {
     align-items: flex-start;
   }
 }
+
+/* Center training hero content */
+.training-page .hero-training {
+  text-align: center;
+}
+
+.training-page .hero-inner {
+  justify-content: center;
+}
+
+.training-page .hero-copy {
+  margin: 0 auto;
+}
+
