@@ -24,8 +24,8 @@
 /* Universal Reset */
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  margin: 0.5em;
+  padding: 1px;
 }
 
 /* Base body styling - no padding so header/logo go full width */
