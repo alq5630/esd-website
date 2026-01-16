@@ -1127,4 +1127,144 @@ footer {
   }
 }
 
+/* =========================================================
+   SUBTYPE D: DYSREGULATED / OSCILLATING (Creative styling)
+   Scoped to body.subtype-page.subtype-d
+   ========================================================= */
+
+.subtype-page.subtype-d .hero-dysregulated {
+  background: radial-gradient(circle at top left, var(--muted-turquoise), var(--deep-teal));
+  color: #ffffff;
+}
+
+/* Quick strip */
+.subtype-page.subtype-d .dys-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin: -1.25rem auto 2rem;
+  max-width: 1100px;
+  padding: 0 1.5rem;
+}
+
+.subtype-page.subtype-d .dys-chip {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: var(--shadow-soft);
+  padding: 1.1rem;
+  text-align: left;
+}
+
+.subtype-page.subtype-d .dys-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #666;
+  margin-bottom: 0.35rem;
+}
+
+.subtype-page.subtype-d .dys-value {
+  font-weight: 800;
+  color: var(--ink);
+}
+
+/* Main layout */
+.subtype-page.subtype-d .dys-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.subtype-page.subtype-d .dys-card {
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: var(--shadow-soft);
+  padding: 1.6rem;
+  text-align: left;
+}
+
+.subtype-page.subtype-d .dys-card h3 {
+  color: var(--rust-orange);
+  margin-bottom: 0.75rem;
+}
+
+.subtype-page.subtype-d .dys-card p {
+  line-height: 1.8;
+  color: #333;
+}
+
+.subtype-page.subtype-d .dys-divider {
+  height: 1px;
+  background: rgba(0,0,0,0.08);
+  margin: 1rem 0 1.25rem;
+}
+
+/* Stack on the right */
+.subtype-page.subtype-d .dys-stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+}
+
+/* Accent card */
+.subtype-page.subtype-d .dys-card-accent {
+  background: linear-gradient(135deg, var(--deep-teal), var(--muted-turquoise));
+  color: #ffffff;
+  border: none;
+}
+
+.subtype-page.subtype-d .dys-card-accent h3 {
+  color: #ffffff;
+}
+
+.subtype-page.subtype-d .dys-muted {
+  opacity: 0.95;
+  margin-bottom: 1rem;
+}
+
+.subtype-page.subtype-d .dys-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.subtype-page.subtype-d .dys-mini {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  opacity: 0.95;
+}
+
+/* Actions */
+.subtype-page.subtype-d .dys-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+/* Make clean-list bullets readable on white cards */
+.subtype-page.subtype-d .clean-list li::before {
+  background: var(--mustard);
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .subtype-page.subtype-d .dys-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .subtype-page.subtype-d .dys-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subtype-page.subtype-d .dys-two {
+    grid-template-columns: 1fr;
+  }
+}
 
