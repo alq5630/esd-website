@@ -532,6 +532,7 @@ footer {
 }
 
 .creator-card p {
+   margin: auto;
   line-height: 1.8;
   max-width: 70ch;
 }
