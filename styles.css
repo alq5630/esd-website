@@ -1,5 +1,6 @@
 /* Global Variables */
 :root {
+  /* Original palette */
   --deep-teal: #1d5b66;
   --rust-orange: #b5542e;
   --mustard-yellow: #d99d2b;
@@ -8,21 +9,35 @@
   --text: #222;
   --hover-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   --nav-hover-bg: rgba(29, 91, 102, 0.1);
+
+  /* New training page palette */
+  --teal-deep: #125f63;
+  --rust: #c85b36;
+  --mustard: #d8a124;
+  --turquoise-muted: #5aa7a3;
+  --offwhite: #f7f4f0;
+  --ink: #1a2124;
+  --radius-lg: 18px;
+  --shadow-soft: 0 14px 30px rgba(0, 0, 0, 0.12);
 }
 
 /* Universal Reset */
 * {
   box-sizing: border-box;
-  padding: 0 3rem 2rem 3rem;
+  margin: 0;
+  padding: 0;
 }
 
+/* Base body styling */
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--background);
   color: var(--text);
-  line-height: 1.2;
+  line-height: 1.4;
+  padding: 0 3rem 2rem 3rem;
 }
 
+/* Logo at top of pages */
 .logo {
   text-align: center;
   margin-top: 0;
@@ -34,6 +49,7 @@ body {
   height: auto;
 }
 
+/* Header and nav used on most pages */
 header {
   background-color: var(--deep-teal);
   color: white;
@@ -50,7 +66,7 @@ header h1 {
 nav {
   background-color: #fdf9f3;
   text-align: center;
-  padding: .75rem;
+  padding: 0.75rem;
 }
 
 nav a {
@@ -66,6 +82,7 @@ nav a:hover {
   border-radius: 5px;
 }
 
+/* Dropdown navigation */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -113,6 +130,7 @@ nav a:hover {
   border-radius: 5px;
 }
 
+/* Original hero style */
 .hero {
   padding: 1rem;
   text-align: center;
@@ -130,6 +148,7 @@ nav a:hover {
   margin: 0 auto;
 }
 
+/* Original section + subtype cards */
 .section {
   padding: 0;
   max-width: 1000px;
@@ -172,6 +191,7 @@ nav a:hover {
   margin-top: 1rem;
 }
 
+/* Footer for original pages */
 footer {
   background-color: var(--deep-teal);
   color: white;
@@ -180,9 +200,10 @@ footer {
   font-size: 0.9rem;
 }
 
+/* Lists */
 ul {
-  list-style-position: inside; /* Moves the bullet inside the list item */
-  padding-left: 1.2rem; /* Slight left padding for alignment */
+  list-style-position: inside;
+  padding-left: 1.2rem;
   margin-bottom: 1rem;
 }
 
@@ -193,7 +214,7 @@ ol {
 }
 
 ul li {
-  margin-bottom: 0.5rem; /* Space between each list item */
+  margin-bottom: 0.5rem;
 }
 
 ol li {
@@ -206,17 +227,20 @@ ol li {
 
 /* Small Screens (max-width: 768px) */
 @media screen and (max-width: 768px) {
-  
-  /* General Padding Adjustments */
+
+  /* Adjust overall padding on small screens */
   body {
     padding: 0 1rem;
   }
 
-  header, .hero, nav, .section {
+  header,
+  .hero,
+  nav,
+  .section {
     padding: 1rem 0.5rem;
   }
 
-  /* Navigation Styling */
+  /* Navigation column layout */
   nav {
     display: flex;
     flex-direction: column;
@@ -237,7 +261,7 @@ ol li {
     border-bottom: 1px solid var(--deep-teal);
   }
 
-  /* Hero and Header Sizing */
+  /* Hero and header sizing */
   header h1 {
     font-size: 2rem;
   }
@@ -250,7 +274,7 @@ ol li {
     font-size: 1.75rem;
   }
 
-  /* Subtype Cards Adjustments */
+  /* Subtype cards */
   .subtypes {
     grid-template-columns: 1fr;
     gap: 0.5rem;
@@ -266,7 +290,7 @@ ol li {
     height: auto;
   }
 
-  /* Footer Refinement */
+  /* Footer refinement */
   footer p {
     line-height: 1.4;
     margin: 0.5rem 0;
@@ -275,7 +299,7 @@ ol li {
 
 /* Ultra Mobile (max-width: 480px) */
 @media screen and (max-width: 480px) {
-  
+
   header h1 {
     font-size: 1.75rem;
   }
@@ -294,25 +318,19 @@ ol li {
   }
 }
 
-:root {
-  --teal-deep: #125f63;
-  --rust: #c85b36;
-  --mustard: #d8a124;
-  --turquoise-muted: #5aa7a3;
-  --offwhite: #f7f4f0;
-  --ink: #1a2124;
-  --radius-lg: 18px;
-  --shadow-soft: 0 14px 30px rgba(0, 0, 0, 0.12);
-}
+/* ===========================
+   TRAINING PAGE AND NEW UI
+   =========================== */
 
-/* Layout helpers */
-
+/* Layout helpers for new sections */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
+/* This second .section was already in your file
+   It now controls vertical spacing for newer sections */
 .section {
   padding: 4rem 0;
 }
@@ -326,8 +344,7 @@ ol li {
   color: #ffffff;
 }
 
-/* Header */
-
+/* Optional app style site header - only used if you add .site-header in HTML */
 .site-header {
   background: #ffffff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.04);
@@ -350,7 +367,9 @@ ol li {
   text-decoration: none;
 }
 
-.logo {
+/* If you use this logo in the sticky header, it will be small.
+   Your big logo at the top of the page still uses .logo img above. */
+.site-header .logo {
   height: 40px;
   width: auto;
 }
@@ -381,8 +400,7 @@ ol li {
   padding-bottom: 0.2rem;
 }
 
-/* Hero */
-
+/* Training hero overrides */
 .hero {
   padding: 4rem 0 3rem;
 }
@@ -430,8 +448,7 @@ ol li {
   font-size: 0.8rem;
 }
 
-/* Section header */
-
+/* Section header for training and similar */
 .section-header {
   text-align: left;
   max-width: 700px;
@@ -450,7 +467,6 @@ ol li {
 }
 
 /* Module cards */
-
 .modules-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -525,8 +541,7 @@ ol li {
   content: "• ";
 }
 
-/* Buttons */
-
+/* Buttons for modules and callouts */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -574,8 +589,7 @@ ol li {
   background: rgba(18, 95, 99, 0.06);
 }
 
-/* Module card footer */
-
+/* Module actions row */
 .module-actions {
   display: flex;
   flex-wrap: wrap;
@@ -583,8 +597,7 @@ ol li {
   margin-top: 0.4rem;
 }
 
-/* Accent callout section */
-
+/* Accent callout section used on training page */
 .callout {
   display: flex;
   align-items: center;
@@ -602,8 +615,7 @@ ol li {
   max-width: 460px;
 }
 
-/* Footer */
-
+/* New footer style for any page that uses .site-footer */
 .site-footer {
   background: #0f1a1d;
   color: #a8b0b5;
@@ -623,8 +635,7 @@ ol li {
   opacity: 0.8;
 }
 
-/* Responsive tweaks */
-
+/* Responsive tweaks for new layout */
 @media (max-width: 768px) {
   .header-inner {
     flex-direction: column;
