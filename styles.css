@@ -1603,3 +1603,57 @@ footer {
     transform: none;
   }
 }
+
+/* =========================================================
+   NAV DROPDOWN FIX: clickable + stays open + on top
+   ========================================================= */
+
+/* Keep nav and dropdown above hero effects */
+nav {
+  position: relative;
+  z-index: 9999;
+}
+
+/* Remove the universal margin/padding gap inside the nav area */
+nav, nav * {
+  margin: 0;
+  padding: 0;
+}
+
+/* Put back reasonable nav spacing */
+nav {
+  padding: 0.75rem;
+}
+
+nav a,
+.dropbtn {
+  padding: 0.4rem 0.7rem;
+  margin: 0 0.35rem;
+  display: inline-block;
+}
+
+/* Make dropdown align directly under the trigger (no hover gap) */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  top: calc(100% + 0px);
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 10000;
+}
+
+/* Make the menu items full-width and easy to click */
+.dropdown-content a {
+  margin: 0;
+  padding: 12px 16px;
+}
+
+/* Ensure dropdown doesn't "die" when moving into it */
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
