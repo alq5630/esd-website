@@ -28,13 +28,12 @@
   padding: 0;
 }
 
-/* Base body styling */
+/* Base body styling - no padding so header/logo go full width */
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--background);
   color: var(--text);
   line-height: 1.4;
-  padding: 0 3rem 2rem 3rem;
 }
 
 /* Logo at top of pages */
@@ -228,11 +227,6 @@ ol li {
 /* Small Screens (max-width: 768px) */
 @media screen and (max-width: 768px) {
 
-  /* Adjust overall padding on small screens */
-  body {
-    padding: 0 1rem;
-  }
-
   header,
   .hero,
   nav,
@@ -329,12 +323,7 @@ ol li {
   padding: 0 1.5rem;
 }
 
-/* This second .section was already in your file
-   It now controls vertical spacing for newer sections */
-.section {
-  padding: 4rem 0;
-}
-
+/* Training specific sections */
 .section-light {
   background: var(--offwhite);
 }
@@ -344,7 +333,7 @@ ol li {
   color: #ffffff;
 }
 
-/* Optional app style site header - only used if you add .site-header in HTML */
+/* Optional sticky header style if you ever switch to it */
 .site-header {
   background: #ffffff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.04);
@@ -367,8 +356,7 @@ ol li {
   text-decoration: none;
 }
 
-/* If you use this logo in the sticky header, it will be small.
-   Your big logo at the top of the page still uses .logo img above. */
+/* Small logo if you use .site-header */
 .site-header .logo {
   height: 40px;
   width: auto;
@@ -401,10 +389,6 @@ ol li {
 }
 
 /* Training hero overrides */
-.hero {
-  padding: 4rem 0 3rem;
-}
-
 .hero-training {
   background: radial-gradient(circle at top left, var(--turquoise-muted), var(--teal-deep));
   color: #ffffff;
@@ -418,17 +402,6 @@ ol li {
 
 .hero-copy {
   max-width: 640px;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.75rem;
-}
-
-.hero p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  max-width: 32rem;
 }
 
 .hero-tags {
@@ -452,7 +425,7 @@ ol li {
 .section-header {
   text-align: left;
   max-width: 700px;
-  margin-bottom: 2.5rem;
+  margin: 0 auto 2.5rem;
 }
 
 .section-header h2 {
