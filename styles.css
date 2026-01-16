@@ -1268,3 +1268,99 @@ footer {
   }
 }
 
+/* =========================================================
+   SUBTYPE D HERO: subtle oscillating wave overlay
+   ========================================================= */
+
+.subtype-page.subtype-d .hero-dysregulated {
+  position: relative;
+  overflow: hidden;
+}
+
+/* layered wave texture */
+.subtype-page.subtype-d .hero-dysregulated::before,
+.subtype-page.subtype-d .hero-dysregulated::after {
+  content: "";
+  position: absolute;
+  left: -15%;
+  right: -15%;
+  height: 220px;
+  bottom: -120px;
+  border-radius: 999px;
+  opacity: 0.22;
+  filter: blur(0.2px);
+  pointer-events: none;
+}
+
+.subtype-page.subtype-d .hero-dysregulated::before {
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.30), rgba(255,255,255,0.06));
+  transform: rotate(-4deg);
+  animation: dys-wave 9s ease-in-out infinite;
+}
+
+.subtype-page.subtype-d .hero-dysregulated::after {
+  background: radial-gradient(circle at 70% 50%, rgba(217,157,43,0.18), rgba(181,84,46,0.10));
+  transform: rotate(3deg);
+  animation: dys-wave 12s ease-in-out infinite reverse;
+}
+
+/* keep hero content above waves */
+.subtype-page.subtype-d .hero-dysregulated .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* slow oscillation */
+@keyframes dys-wave {
+  0%   { transform: translateX(0) rotate(-4deg); }
+  50%  { transform: translateX(6%) rotate(-1deg); }
+  100% { transform: translateX(0) rotate(-4deg); }
+}
+
+/* reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .subtype-page.subtype-d .hero-dysregulated::before,
+  .subtype-page.subtype-d .hero-dysregulated::after {
+    animation: none;
+  }
+}
+
+/* =========================================================
+   SUBTYPE D: subtle oscillating pulse on role chips
+   ========================================================= */
+
+.subtype-page.subtype-d .hero-tags {
+  display: flex;
+  justify-content: center;
+}
+
+.subtype-page.subtype-d .hero-tags .tag {
+  animation: dys-pulse 6s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 1.2s);
+}
+
+/* soft pulse */
+@keyframes dys-pulse {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    opacity: 0.95;
+  }
+  50% {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    opacity: 0.95;
+  }
+}
+
+/* accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .subtype-page.subtype-d .hero-tags .tag {
+    animation: none;
+  }
+}
