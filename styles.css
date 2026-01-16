@@ -749,3 +749,346 @@ footer {
     font-size: 0.8rem;
   }
 }
+
+/* =========================================================
+   FIX: TRAINING HERO CENTERING
+   ========================================================= */
+
+/* Make sure the training hero content is centered as a block */
+.training-page .hero-training .hero-inner {
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Ensure the copy block is centered and doesn't drift */
+.training-page .hero-training .hero-copy {
+  width: 100%;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Center the tag pills row */
+.training-page .hero-training .hero-tags {
+  width: 100%;
+  justify-content: center;
+}
+
+/* In case any inherited alignment pushes things around */
+.training-page .hero-training h1,
+.training-page .hero-training h2,
+.training-page .hero-training p {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Mobile: stop your existing "align-items:flex-start" from overriding centering */
+@media screen and (max-width: 768px) {
+  .training-page .hero-training .hero-inner {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
+/* =========================================================
+   CREATIVE SUBTYPE PAGE: DARK EMPATHY (Subtype F)
+   Scopes to body.subtype-page.subtype-f so nothing else breaks
+   ========================================================= */
+
+/* Clean list style for this subtype page */
+.subtype-page.subtype-f .clean-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.subtype-page.subtype-f .clean-list li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.55rem;
+}
+
+.subtype-page.subtype-f .clean-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--mustard);
+}
+
+/* Hero */
+.subtype-page.subtype-f .subtype-hero {
+  position: relative;
+  padding: 3.25rem 1.5rem 2.75rem;
+  color: #ffffff;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(90, 167, 163, 0.55), rgba(18, 95, 99, 0.95)),
+    linear-gradient(135deg, #0f1a1d, #0f1a1d);
+}
+
+.subtype-page.subtype-f .subtype-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(217, 157, 43, 0.15), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(181, 84, 46, 0.16), transparent 45%),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: auto, auto, 22px 22px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.subtype-page.subtype-f .subtype-hero-inner {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.subtype-page.subtype-f .subtype-hero-top {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.9rem;
+}
+
+.subtype-page.subtype-f .subtype-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.subtype-page.subtype-f .subtype-pill-ghost {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.subtype-page.subtype-f .subtype-title {
+  font-size: 3rem;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.75rem;
+}
+
+.subtype-page.subtype-f .subtype-subtitle {
+  max-width: 70ch;
+  margin: 0 auto;
+  line-height: 1.8;
+  opacity: 0.95;
+}
+
+.subtype-page.subtype-f .subtype-hero-actions {
+  margin-top: 1.3rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.subtype-page.subtype-f .subtype-ghost-on-dark {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.subtype-page.subtype-f .subtype-ghost-on-dark:hover {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+/* Evidence strip */
+.subtype-page.subtype-f .evidence-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin: -1.5rem auto 2rem;
+  max-width: 1100px;
+  padding: 0 1.5rem;
+}
+
+.subtype-page.subtype-f .evidence-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: var(--shadow-soft);
+  padding: 1.1rem 1.1rem;
+  text-align: left;
+}
+
+.subtype-page.subtype-f .evidence-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #666;
+  margin-bottom: 0.35rem;
+}
+
+.subtype-page.subtype-f .evidence-value {
+  font-weight: 800;
+  color: var(--ink);
+}
+
+/* Layout */
+.subtype-page.subtype-f .subtype-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.subtype-page.subtype-f .subtype-quick .quick-card {
+  position: sticky;
+  top: 1rem;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: var(--shadow-soft);
+  padding: 1.6rem;
+}
+
+.subtype-page.subtype-f .quick-card h2 {
+  margin-bottom: 1rem;
+  color: var(--ink);
+}
+
+.subtype-page.subtype-f .quick-kicker {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--rust-orange);
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+}
+
+.subtype-page.subtype-f .quick-block p {
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.subtype-page.subtype-f .quick-divider {
+  height: 1px;
+  background: rgba(0,0,0,0.08);
+  margin: 0.9rem 0 1.1rem;
+}
+
+.subtype-page.subtype-f .quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.subtype-page.subtype-f .subtype-deep .deep-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+}
+
+.subtype-page.subtype-f .deep-card {
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: var(--shadow-soft);
+  padding: 1.6rem;
+}
+
+.subtype-page.subtype-f .deep-card h3 {
+  color: var(--rust-orange);
+  margin-bottom: 0.75rem;
+}
+
+.subtype-page.subtype-f .compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.subtype-page.subtype-f .compare-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #666;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.subtype-page.subtype-f .deep-card-accent {
+  background: linear-gradient(135deg, var(--deep-teal), var(--muted-turquoise));
+  color: #ffffff;
+  border: none;
+}
+
+.subtype-page.subtype-f .deep-card-accent h3 {
+  color: #ffffff;
+}
+
+.subtype-page.subtype-f .muted-on-dark {
+  opacity: 0.95;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.subtype-page.subtype-f .tells-tests {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.subtype-page.subtype-f .tt-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  opacity: 0.95;
+}
+
+/* Disabled button */
+.disabled-btn {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .subtype-page.subtype-f .evidence-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .subtype-page.subtype-f .subtype-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .subtype-page.subtype-f .subtype-quick .quick-card {
+    position: static;
+  }
+
+  .subtype-page.subtype-f .compare,
+  .subtype-page.subtype-f .tells-tests {
+    grid-template-columns: 1fr;
+  }
+
+  .subtype-page.subtype-f .subtype-title {
+    font-size: 2.4rem;
+  }
+}
+
