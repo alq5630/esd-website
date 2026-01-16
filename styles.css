@@ -751,23 +751,46 @@ footer {
 }
 
 /* =========================================================
-   FIX: TRAINING HERO CENTERING
+   FIX: TRAINING HERO CENTERING (no change to your global *)
    ========================================================= */
 
-/* Make sure the training hero content is centered as a block */
-.training-page .hero-training .hero-inner {
-  width: 100%;
+/* Remove the global * margin/padding from the training hero layout pieces only */
+.training-page .hero-training,
+.training-page .hero-training .container,
+.training-page .hero-training .hero-inner,
+.training-page .hero-training .hero-copy,
+.training-page .hero-training .hero-tags,
+.training-page .hero-training .tag,
+.training-page .hero-training h2,
+.training-page .hero-training p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Add back intentional spacing (clean + consistent) */
+.training-page .hero-training {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.training-page .hero-training .container {
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Force centering regardless of older flex rules */
+.training-page .hero-training .hero-inner {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 
-/* Ensure the copy block is centered and doesn't drift */
+/* Center the copy block */
 .training-page .hero-training .hero-copy {
   width: 100%;
   max-width: 720px;
@@ -775,34 +798,47 @@ footer {
   margin-right: auto;
 }
 
-/* Center the tag pills row */
+/* Restore readable spacing inside the copy */
+.training-page .hero-training .hero-copy h2 {
+  margin-bottom: 0.75rem;
+}
+
+.training-page .hero-training .hero-copy p {
+  margin: 0 auto;
+  max-width: 60ch;
+  line-height: 1.7;
+}
+
+/* Center and space the tags */
 .training-page .hero-training .hero-tags {
-  width: 100%;
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 0.5rem;
 }
 
-/* In case any inherited alignment pushes things around */
-.training-page .hero-training h1,
-.training-page .hero-training h2,
-.training-page .hero-training p {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+/* Keep your original tag look but restore padding */
+.training-page .hero-training .tag {
+  padding: 0.25rem 0.7rem;
 }
 
-/* Mobile: stop your existing "align-items:flex-start" from overriding centering */
+/* Mobile: keep it centered */
 @media screen and (max-width: 768px) {
-  .training-page .hero-training .hero-inner {
-    align-items: center;
-    text-align: center;
+  .training-page .hero-training {
+    padding: 2.25rem 1rem;
   }
 }
 
 
 /* =========================================================
    CREATIVE SUBTYPE PAGE: DARK EMPATHY (Subtype F)
-   Scopes to body.subtype-page.subtype-f so nothing else breaks
+   Scoped so it only affects dark empathy page
    ========================================================= */
+
+.subtype-page.subtype-f .page {
+  padding-top: 2rem;
+}
 
 /* Clean list style for this subtype page */
 .subtype-page.subtype-f .clean-list {
@@ -1060,7 +1096,7 @@ footer {
   opacity: 0.95;
 }
 
-/* Disabled button */
+/* Disabled button (site-wide utility) */
 .disabled-btn {
   opacity: 0.6;
   cursor: not-allowed;
@@ -1091,4 +1127,5 @@ footer {
     font-size: 2.4rem;
   }
 }
+
 
