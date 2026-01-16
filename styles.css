@@ -321,6 +321,7 @@ ol li {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  text-align: center;
 }
 
 /* Training specific sections */
