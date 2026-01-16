@@ -1557,3 +1557,49 @@ footer {
     animation: none;
   }
 }
+
+/* =========================================================
+   SUBTYPE B: empathy amplification on engagement
+   ========================================================= */
+
+/* when user engages with the hero */
+.subtype-page.subtype-b .hero-hyper:hover::after,
+.subtype-page.subtype-b .hero-hyper:focus-within::after {
+  opacity: 0.85;
+  transform: scale(1.06);
+  filter: blur(0.6px);
+}
+
+/* slightly brighten tags during engagement */
+.subtype-page.subtype-b .hero-hyper:hover .tag,
+.subtype-page.subtype-b .hero-hyper:focus-within .tag {
+  background: rgba(255,255,255,0.22);
+  border-color: rgba(255,255,255,0.55);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+}
+
+/* subtle upward drift */
+.subtype-page.subtype-b .hero-hyper:hover .tag {
+  transform: translateY(-2px);
+}
+
+/* smooth it */
+.subtype-page.subtype-b .hero-hyper .tag {
+  transition:
+    background 0.6s ease,
+    border-color 0.6s ease,
+    box-shadow 0.6s ease,
+    transform 0.6s ease;
+}
+
+/* accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .subtype-page.subtype-b .hero-hyper:hover::after,
+  .subtype-page.subtype-b .hero-hyper:focus-within::after {
+    transform: none;
+  }
+
+  .subtype-page.subtype-b .hero-hyper:hover .tag {
+    transform: none;
+  }
+}
