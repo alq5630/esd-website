@@ -1,6 +1,9 @@
-/* Global Variables */
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
 :root {
-  /* Original palette */
+  /* Core palette */
   --deep-teal: #1d5b66;
   --rust-orange: #b5542e;
   --mustard-yellow: #d99d2b;
@@ -10,7 +13,7 @@
   --hover-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   --nav-hover-bg: rgba(29, 91, 102, 0.1);
 
-  /* New training page palette */
+  /* Training/UI palette */
   --teal-deep: #125f63;
   --rust: #c85b36;
   --mustard: #d8a124;
@@ -21,14 +24,16 @@
   --shadow-soft: 0 14px 30px rgba(0, 0, 0, 0.12);
 }
 
-/* Universal Reset */
+/* =========================================================
+   RESET + BASE
+   ========================================================= */
+
 * {
   box-sizing: border-box;
-  margin: 0.5em;
-  padding: 1px;
+  margin: 0;
+  padding: 0;
 }
 
-/* Base body styling - no padding so header/logo go full width */
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--background);
@@ -36,7 +41,40 @@ body {
   line-height: 1.4;
 }
 
-/* Logo at top of pages */
+/* Lists (site-wide) */
+ul,
+ol {
+  list-style-position: inside;
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+ul li,
+ol li {
+  margin-bottom: 0.5rem;
+}
+
+/* =========================================================
+   GLOBAL LAYOUT HELPERS
+   ========================================================= */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Used on About + Contact pages */
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+/* =========================================================
+   BRAND (LOGO)
+   ========================================================= */
+
 .logo {
   text-align: center;
   margin-top: 0;
@@ -48,7 +86,10 @@ body {
   height: auto;
 }
 
-/* Header and nav used on most pages */
+/* =========================================================
+   HEADER + NAV
+   ========================================================= */
+
 header {
   background-color: var(--deep-teal);
   color: white;
@@ -59,7 +100,7 @@ header {
 header h1 {
   font-size: 2.5rem;
   font-weight: 800;
-  line-height: 0;
+  line-height: 1.1;
 }
 
 nav {
@@ -129,7 +170,10 @@ nav a:hover {
   border-radius: 5px;
 }
 
-/* Original hero style */
+/* =========================================================
+   HERO
+   ========================================================= */
+
 .hero {
   padding: 1rem;
   text-align: center;
@@ -139,7 +183,7 @@ nav a:hover {
 
 .hero h2 {
   font-size: 2rem;
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
 }
 
 .hero p {
@@ -147,7 +191,10 @@ nav a:hover {
   margin: 0 auto;
 }
 
-/* Original section + subtype cards */
+/* =========================================================
+   SECTIONS + SUBTYPE CARDS
+   ========================================================= */
+
 .section {
   padding: 0;
   max-width: 1000px;
@@ -190,7 +237,10 @@ nav a:hover {
   margin-top: 1rem;
 }
 
-/* Footer for original pages */
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
 footer {
   background-color: var(--deep-teal);
   color: white;
@@ -199,132 +249,10 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Lists */
-ul {
-  list-style-position: inside;
-  padding-left: 1.2rem;
-  margin-bottom: 1rem;
-}
+/* =========================================================
+   TRAINING PAGE / NEW UI
+   ========================================================= */
 
-ol {
-  list-style-position: inside;
-  padding-left: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-ul li {
-  margin-bottom: 0.5rem;
-}
-
-ol li {
-  margin-bottom: 0.5rem;
-}
-
-/* ===========================
-   MOBILE ADAPTATIONS 
-   =========================== */
-
-/* Small Screens (max-width: 768px) */
-@media screen and (max-width: 768px) {
-
-  header,
-  .hero,
-  nav,
-  .section {
-    padding: 1rem 0.5rem;
-  }
-
-  /* Navigation column layout */
-  nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav a {
-    margin: 0.5rem 0;
-  }
-
-  .dropdown-content {
-    position: static;
-    width: 100%;
-    background-color: var(--background);
-  }
-
-  .dropdown-content a {
-    border-bottom: 1px solid var(--deep-teal);
-  }
-
-  /* Hero and header sizing */
-  header h1 {
-    font-size: 2rem;
-  }
-
-  .hero {
-    padding: 1rem 0;
-  }
-
-  .hero h2 {
-    font-size: 1.75rem;
-  }
-
-  /* Subtype cards */
-  .subtypes {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-  }
-
-  .subtype {
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-  }
-
-  .subtype img {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Footer refinement */
-  footer p {
-    line-height: 1.4;
-    margin: 0.5rem 0;
-  }
-}
-
-/* Ultra Mobile (max-width: 480px) */
-@media screen and (max-width: 480px) {
-
-  header h1 {
-    font-size: 1.75rem;
-  }
-
-  .hero h2 {
-    font-size: 1.5rem;
-  }
-
-  .dropdown-content a {
-    font-size: 0.9rem;
-    padding: 8px 12px;
-  }
-
-  footer {
-    font-size: 0.8rem;
-  }
-}
-
-/* ===========================
-   TRAINING PAGE AND NEW UI
-   =========================== */
-
-/* Layout helpers for new sections */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  text-align: center;
-}
-
-/* Training specific sections */
 .section-light {
   background: var(--offwhite);
 }
@@ -334,67 +262,13 @@ ol li {
   color: #ffffff;
 }
 
-/* Optional sticky header style if you ever switch to it */
-.site-header {
-  background: #ffffff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.75rem 1.5rem;
-}
-
-.logo-wrap {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  text-decoration: none;
-}
-
-/* Small logo if you use .site-header */
-.site-header .logo {
-  height: 40px;
-  width: auto;
-}
-
-.site-title {
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  font-size: 1rem;
-  text-transform: uppercase;
-  color: var(--teal-deep);
-}
-
-.main-nav a {
-  margin-left: 1.25rem;
-  text-decoration: none;
-  color: #444;
-  font-size: 0.95rem;
-}
-
-.main-nav a:hover {
-  color: var(--teal-deep);
-}
-
-.nav-link-active {
-  color: var(--teal-deep);
-  font-weight: 600;
-  border-bottom: 2px solid var(--mustard);
-  padding-bottom: 0.2rem;
-}
-
-/* Training hero overrides */
+/* Training hero */
 .hero-training {
   background: radial-gradient(circle at top left, var(--turquoise-muted), var(--teal-deep));
   color: #ffffff;
 }
 
+/* Training hero structure */
 .hero-inner {
   display: flex;
   align-items: center;
@@ -405,6 +279,7 @@ ol li {
   max-width: 640px;
 }
 
+/* Training tags */
 .hero-tags {
   margin-top: 1.25rem;
   display: flex;
@@ -422,7 +297,7 @@ ol li {
   font-size: 0.8rem;
 }
 
-/* Section header for training and similar */
+/* Training section header */
 .section-header {
   text-align: left;
   max-width: 700px;
@@ -440,7 +315,7 @@ ol li {
   line-height: 1.7;
 }
 
-/* Module cards */
+/* Training modules */
 .modules-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -515,7 +390,7 @@ ol li {
   content: "• ";
 }
 
-/* Buttons for modules and callouts */
+/* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -563,7 +438,6 @@ ol li {
   background: rgba(18, 95, 99, 0.06);
 }
 
-/* Module actions row */
 .module-actions {
   display: flex;
   flex-wrap: wrap;
@@ -571,7 +445,7 @@ ol li {
   margin-top: 0.4rem;
 }
 
-/* Accent callout section used on training page */
+/* Training callout section */
 .callout {
   display: flex;
   align-items: center;
@@ -589,46 +463,7 @@ ol li {
   max-width: 460px;
 }
 
-/* New footer style for any page that uses .site-footer */
-.site-footer {
-  background: #0f1a1d;
-  color: #a8b0b5;
-  padding: 1.8rem 0;
-  font-size: 0.85rem;
-}
-
-.footer-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  text-align: center;
-}
-
-.footer-note {
-  margin-top: 0.35rem;
-  opacity: 0.8;
-}
-
-/* Responsive tweaks for new layout */
-@media (max-width: 768px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-
-  .hero-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .callout {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-/* Center training hero content */
+/* Center training hero content (only on training page) */
 .training-page .hero-training {
   text-align: center;
 }
@@ -641,12 +476,9 @@ ol li {
   margin: 0 auto;
 }
 
-/* About page layout */
-.page {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2.5rem 1.5rem;
-}
+/* =========================================================
+   ABOUT PAGE
+   ========================================================= */
 
 .about-grid {
   display: grid;
@@ -658,7 +490,7 @@ ol li {
 .about-card {
   background: #fff;
   border-radius: 16px;
-  border: 1px solid rgba(0,0,0,0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: var(--shadow-soft);
   padding: 1.5rem;
 }
@@ -709,13 +541,10 @@ ol li {
   margin-top: 1.25rem;
 }
 
-/* Make sure the hero h2 style applies nicely */
-.hero h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
+/* =========================================================
+   CONTACT PAGE
+   ========================================================= */
 
-/* Contact page layout */
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -726,7 +555,7 @@ ol li {
 .contact-card {
   background: #fff;
   border-radius: 16px;
-  border: 1px solid rgba(0,0,0,0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: var(--shadow-soft);
   padding: 1.6rem;
 }
@@ -738,7 +567,7 @@ ol li {
 
 .contact-item {
   padding: 0.85rem 0;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .contact-item:last-child {
@@ -770,7 +599,6 @@ ol li {
   margin-top: 1.25rem;
 }
 
-/* Accent collaboration card */
 .contact-card-accent {
   background: linear-gradient(135deg, var(--deep-teal), var(--muted-turquoise));
   color: #fff;
@@ -793,8 +621,8 @@ ol li {
   align-items: center;
   padding: 0.25rem 0.7rem;
   border-radius: 999px;
-  background: rgba(255,255,255,0.14);
-  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   font-size: 0.8rem;
   margin-bottom: 0.75rem;
 }
@@ -822,11 +650,99 @@ ol li {
   background: var(--mustard);
 }
 
-/* Mobile tweaks */
-@media (max-width: 768px) {
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+  header,
+  .hero,
+  nav,
+  .section {
+    padding: 1rem 0.5rem;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 0.5rem 0;
+  }
+
+  .dropdown-content {
+    position: static;
+    width: 100%;
+    background-color: var(--background);
+  }
+
+  .dropdown-content a {
+    border-bottom: 1px solid var(--deep-teal);
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.75rem;
+  }
+
+  .subtypes {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .subtype {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  }
+
+  .subtype img {
+    width: 100%;
+    height: auto;
+  }
+
+  footer p {
+    line-height: 1.4;
+    margin: 0.5rem 0;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .callout {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .contact-actions {
     flex-direction: column;
     align-items: stretch;
   }
 }
 
+@media screen and (max-width: 480px) {
+
+  header h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .dropdown-content a {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
