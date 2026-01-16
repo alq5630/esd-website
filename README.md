@@ -1,2 +1,2 @@
 # esd-website
-Empathy Spectrum Disorder Webpage
+Empathy Spectrum Dysregulation Webpage
