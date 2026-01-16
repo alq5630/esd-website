@@ -1525,3 +1525,35 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================================================
+   SUBTYPE B HERO: gentle breathing glow (flooding vibe)
+   ========================================================= */
+
+.subtype-page.subtype-b .hero-hyper::after {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background:
+    radial-gradient(circle at 35% 30%, rgba(255,255,255,0.22), transparent 55%),
+    radial-gradient(circle at 70% 60%, rgba(217,157,43,0.18), transparent 58%),
+    radial-gradient(circle at 20% 80%, rgba(63,157,155,0.18), transparent 60%);
+  opacity: 0.55;
+  transform: scale(1);
+  filter: blur(1px);
+  pointer-events: none;
+  animation: hyper-breathe 7.5s ease-in-out infinite;
+}
+
+@keyframes hyper-breathe {
+  0%   { opacity: 0.40; transform: scale(1); }
+  50%  { opacity: 0.70; transform: scale(1.03); }
+  100% { opacity: 0.40; transform: scale(1); }
+}
+
+/* accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .subtype-page.subtype-b .hero-hyper::after {
+    animation: none;
+  }
+}
